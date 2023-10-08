@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dh7xvjot64fqp"]
+
+[ext_resource type="Texture2D" uid="uid://cd562j5yuitip" path="res://square.png" id="1_sa8qm"]
+[ext_resource type="Script" path="res://dude.gd" id="1_wefdv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4cep"]
+
+[node name="Dude" type="Node2D"]
+script = ExtResource("1_wefdv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_sa8qm")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_y4cep")
