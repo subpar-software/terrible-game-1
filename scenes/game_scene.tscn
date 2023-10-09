@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnncdr6syu885"]
+
+[ext_resource type="PackedScene" uid="uid://cyhx2i6rkp8p4" path="res://scenes/tower/tower.tscn" id="2_i3dvw"]
+
+[node name="GameScene" type="Node2D"]
+
+[node name="Towers" type="Node2D" parent="."]
+
+[node name="Tower1" parent="Towers" instance=ExtResource("2_i3dvw")]
+position = Vector2(263, 505)
+controller = "Player"
+level = 5
+
+[node name="Tower2" parent="Towers" instance=ExtResource("2_i3dvw")]
+position = Vector2(891, 198)
+level = 30
+
+[node name="Tower3" parent="Towers" instance=ExtResource("2_i3dvw")]
+position = Vector2(560, 330)
+
+[node name="Tower4" parent="Towers" instance=ExtResource("2_i3dvw")]
+position = Vector2(896, 497)
+controller = "Enemy"
+level = 10
+
+[node name="Tower5" parent="Towers" instance=ExtResource("2_i3dvw")]
+position = Vector2(242, 179)

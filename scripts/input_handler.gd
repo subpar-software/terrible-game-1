@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 signal yo_getting_attacked
 
@@ -9,7 +9,7 @@ var other_selected
 
 
 func _ready():
-	towers = get_node("../Towers").get_children()
+	towers = get_node("../GameScene/Towers").get_children()
 	for tower in towers:
 		tower.tower_selected.connect(_on_tower_tower_selected)
 

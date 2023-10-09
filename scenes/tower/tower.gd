@@ -18,15 +18,12 @@ var attackable_towers = []
 var enemy_decision_counter = 0
 var enemy_take_action = false
 
-
-var dude = preload("res://dude.tscn")
+var dude = preload("res://scenes/dude/dude.tscn")
 
 func _ready():
-	var input_handler = get_node("../../InputHandler")
+	var input_handler = get_tree().get_root().get_node("InputHandler")
 	input_handler.yo_getting_attacked.connect(_on_getting_attacked)
 	
-	# this also needs to run after a tower switches to enemy
-	# also stop all dude production when a tower switches
 	if (controller == "Enemy"):
 		enemy_setup()
 
