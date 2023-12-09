@@ -21,7 +21,21 @@ position = Vector2(560, 330)
 [node name="Tower4" parent="Towers" instance=ExtResource("2_i3dvw")]
 position = Vector2(896, 497)
 controller = "Enemy"
-level = 10
+level = 9
 
 [node name="Tower5" parent="Towers" instance=ExtResource("2_i3dvw")]
 position = Vector2(242, 179)
+
+[node name="Info" type="Node" parent="."]
+
+[node name="Label2" type="Label" parent="Info"]
+offset_left = 182.0
+offset_top = 21.0
+offset_right = 316.0
+offset_bottom = 84.0
+
+[node name="Label" type="Label" parent="Info"]
+offset_left = 34.0
+offset_top = 21.0
+offset_right = 168.0
+offset_bottom = 84.0
